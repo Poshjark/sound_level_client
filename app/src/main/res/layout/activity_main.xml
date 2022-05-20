@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="579dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="412dp"
+        android:contentDescription="@string/slider_text"
+        android:rotation="-90"
+        android:stepSize="1"
+        android:value="20"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.material.slider.Slider>
+
+    <Button
+        android:id="@+id/play_pause_button"
+        android:layout_width="173dp"
+        android:layout_height="121dp"
+        android:gravity="center"
+        android:text="@string/play_pause_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/volume_step_up_button"
+        android:layout_width="114dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="236dp"
+        android:text="@string/volume_step_up_button_text"
+        app:layout_constraintBottom_toTopOf="@+id/volume_step_down_button"
+        app:layout_constraintEnd_toEndOf="@+id/play_pause_button"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="@+id/play_pause_button" />
+
+    <Button
+        android:id="@+id/volume_step_down_button"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="172dp"
+        android:text="@string/volume_step_down_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/play_pause_button"
+        app:layout_constraintStart_toStartOf="@+id/play_pause_button" />
+
+    <Button
+        android:id="@+id/next_media_button"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/next_media_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previous_media_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/previous_media_button"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/previous_media_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/volume_text"
+        android:layout_width="154dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/volume_text"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_pause_button"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <EditText
+        android:id="@+id/ip_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="172dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="number|numberDecimal"
+        android:digits="0123456789."
+        android:autofillHints="IP" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
